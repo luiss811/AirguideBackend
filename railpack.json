@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.railpack.com",
+    "steps": {
+        "install": {
+            "commands": [
+                "npm install"
+            ]
+        },
+        "build": {
+            "inputs": [
+                {
+                    "step": "install"
+                }
+            ],
+            "commands": [
+                "...",
+                "./airguide-build.sh"
+            ]
+        }
+    },
+    "deploy": {
+        "startCommand": "npm run build"
+    }
+}
